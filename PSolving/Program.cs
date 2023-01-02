@@ -1,4 +1,5 @@
 ﻿using PSolving;
-
-var data = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
-Console.WriteLine(SlidingWindow.Brut_force(data,3)); 
+using PSolving.TwoPointerProblems;
+var text = "racecar";
+var isPalindrome= PalindromeString.IsPalindrome(text.ToArray(),0,text.Length-1);
+Console.WriteLine(isPalindrome);

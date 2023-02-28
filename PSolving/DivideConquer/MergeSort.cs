@@ -20,7 +20,7 @@ namespace PSolving.DivideConquer
     {
         void IExecutableCode.MainBruteForceWay()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Not implement yet");
         }
         void merge(int[] arr, int l, int m, int r)
         {

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace PSolving.Backtracking
 {
     /// <summary>
+    /// always 2^n grow expontenal  if you go to all solution of subset problem n is size equal 10 
+    /// the result will be 1024 if size increase by one it will be 2048
     /// A backtracking algorithm is a problem-solving algorithm that uses a brute force approach 
     /// for finding the desired output.
     /// The Brute force approach tries out all the possible solutions and chooses 

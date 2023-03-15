@@ -22,6 +22,59 @@ namespace PSolving.Backtracking
     /// of the problem from the root as an initial state to the leaf as a terminal state.
     /// Use backtracking or brute force to generate all possible solutions and then filter them based on constraints.
     /// </summary>
+    /// valid option (do) (recursive) (undo) you reach the end of the problem
+    /// (complete search) can solve any prolblem but for small constraint
+    public class TargetSum : IExecutableCode
+    {
+        void IExecutableCode.MainBruteForceWay()
+        {
+            Console.WriteLine("no implementation");
+        }
+
+        void IExecutableCode.MainByPattern()
+        {
+            Solve(0);
+        }
+        int sum = 0;
+        int n = 6;
+        int t = 7;
+        int[] arr = new int[] { 3, 2, 4, 5, 7, 6 };
+        Stack<int> stack = new Stack<int>();
+        
+        void Solve(int pos)
+        {
+            if (pos == n)// base
+            {
+                if (sum == t)
+                {
+
+
+                    Console.WriteLine(string.Join(',', stack));
+
+                }
+                return;
+            }
+            else
+            {
+                sum += arr[pos];//do
+                stack.Push(arr[pos]);
+                Solve(pos + 1);// recursive
+                sum -= arr[pos];//undo
+                stack.Pop();
+                Solve(pos + 1);
+
+            }
+        }
+        string IExecutableCode.Pattern()
+        {
+            return "backtracking true all possible solution";
+        }
+
+        string IExecutableCode.Problem()
+        {
+            return "get all items that sum equal target";
+        }
+    }
     public class QueensProblem : IExecutableCode
     {
         void IExecutableCode.MainBruteForceWay()
